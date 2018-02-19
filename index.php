@@ -23,5 +23,13 @@ $app->get('/admin', function() {
 
 });
 
+$app->get('/admin/login', function(){
+	$page = new PageAdmin([
+		"header"=>false,    //desabilitando o header e footer padrões
+		"footer"=>false
+	]);
+	$page->setTpl("login");
+});
+
 $app->run();
 
